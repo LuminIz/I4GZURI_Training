@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: hsl(0, 0%, 95%);
+}
+
+nav {
+    width: 50%;
+    margin: auto;
+    align-items: center;
+    padding: 15px 25px;
+}
+a {
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(27, 83, 83);
+}
+a:hover {
+    background-color: grey;
+}
+main {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content {
+    width: 50%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-areas: 
+    "a a a b b"
+    "a a a b b"
+    "c c d d d"
+    "c c e e e"
+    ;
+    gap: 10px;
+    height: 70vh;
+}
+@media screen and (max-width: 1448px) and (min-width: 750px) { 
+    .content{grid-template-columns: repeat(5,1fr);}
+}
+@media screen and (max-width: 749px) and (min-width: 400px) { 
+    .content{grid-template-columns: repeat(3,1fr);}
+}
+@media screen and (max-width: 400px) and (min-width: 250px){
+    .content{grid-template-columns: repeat(1,1fr);}
+}
+.grid div {
+    padding: 35px;
+}
+.orange {
+    background-color: rgb(219, 90, 47);
+    grid-area: a;
+}
+.yellow {
+    background-color: rgb(208, 163, 48);
+    grid-area: b;
+}
+.green {
+    background-color: rgb(35, 118, 85);
+    grid-area: c;
+}
+.blue {
+    background-color: rgb(27, 186, 198);
+    grid-area: d;
+}
+.blue2 {
+    background-color: lightblue;
+    grid-area: e;
+}
